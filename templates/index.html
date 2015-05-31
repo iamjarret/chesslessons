@@ -22,9 +22,9 @@
     <div class="bar" id="navBar">
         <img id="logo" src="{{url_for('static' , filename='logo.png')}}" />
         <ul id="nav-links">
-            <li><a href="#">VIDEOS</a></li>
-            <li><a href="#">PUZZLES</a></li>
-            <li><a href="#">GAMES</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">RESEARCH</a></li>
+            <li><a href="#">MASTER INSIGHTS</a></li>
             <li><a href="#">SIGN IN</a></li>
             <li><a href="#" class="signUp">SIGN UP</a></li>
         </ul>
@@ -35,15 +35,15 @@
 
 
     <div id="jumbotron">
-        <h1>The Best Way To Become a Grandmaster</h1>
-        <h2>Let us take you from zero to grandmaster in under 6 months!</h2><br />
+        <h1>The highest quality chess instruction available.</h1>
+        <h2>Brilliant players see the board differently.  Let them show you how.</h2><br />
         <div id="jumboEffects">
             <img id="laptop" src="{{url_for('static' , filename='laptop03.png')}}" />
             <a href="#"><img id="horse" src="{{url_for('static' , filename='horse.png')}}" /></a>
             <p id="yourMove" class="animated">It's your move.</p>
         </div>
         <p>Use discount code: <a href="#">first5000members</a><span id="mobile"><br /></span> to get your free membership!</p>
-        <a href="#" class="membershipButton"><strong>Get Your Free Membership!</strong></a>
+        <a href="#" class="membershipButton"><strong>Become a Member</strong></a>
     </div>
 
     <div class="section">
@@ -53,44 +53,27 @@
         <div class="row">
             <div class="centerDiv">
                 <div class="float">
-                    <div class="animation">
-                        <img src="{{url_for('static' , filename='cloudsmall.png')}}" id="cloud" class="animated">
+                    <div class="animation" style="height:270px;width:550px;margin-left:5px;">
+                        <h2>Memory is the Foundation of Chess</h2>
+                        <p>Research indicates that chess grandmasters may know up to 100,000 patterns.  Yet, it's impossible for one player to discover all of these on there own.  And as such, world-level players play through their colleages games.  Where they differ from a typical chess player is in there ability to understand the essence of a position and recall it.  Successful chess players synthesize information differently.</p>
+                        <a href="#"><b>Read more research <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
                     </div>
                 </div>
                 <div class="float">
-                    <div class="animation" style="height:290px;width:390px;margin-left:25px;">
-                        <h2>Play in the cloud</h2>
-                        <p>Learn by playing our four proprietary chess video games, with levels from 0 (n00b) to 100 (grandmaster). No need for downloads; everything happens in the cloud. Play against the computer to train, and play against other people to win!</p>
-                        <a href="#"><b>Sign up to start playing <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
+                    <div class="animation" style="margin-left:100px;margin-top:75px">
+                        <img src="{{url_for('static' , filename='horse.png')}}">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="centerDiv">
-                <div class="float">
-                    <div class="animation" style="height:270px;width:400px;margin-left:5px;">
-                        <h2>Puzzles makes perfect</h2>
-                        <p>Practice solving puzzles, and you'll be on your way to becoming a grandmaster in no time. Our puzzles give you a board position... it's up to you to figure out the next move!</p>
-                        <a href="#"><b>Compare pricing plans <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
-                    </div>
-                </div>
-                <div class="float">
-                    <div class="animation" style="margin-left:25px;">
-                        <img src="{{url_for('static' , filename='chessboardEdited.png')}}">
-                        <img src="{{url_for('static' , filename='checkmark.png')}}" id="checkmark">
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
+<div class="row">
             <div class="centerDiv">
                 <div class="float">
                     <div class="animation">
                         <video width="340" height="160" style="position:absolute;z-index:-10;top:52px;left:52px;" autoplay muted loop>
-                          <source src="{{url_for('static' , filename='vid01b.mp4')}}" type="video/mp4">
+                          <source src="{{url_for('static' , filename='video/vid01b.mp4')}}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
                          <video width="170" height="107" style="position:absolute;z-index:-5;top:161px;left:246px;" autoplay muted loop>
@@ -106,13 +89,15 @@
                 </div>
                 <div class="float">
                     <div class="animation" style="height:290px;width:400px;margin-left:25px;">
-                        <h2>The best videos ever</h2>
-                        <p>Learn by watching the best videos in the history of chess. Not only are our video lessons taught by some of the top grandmasters in the entire world, but they are filmed in Ultra-HD for hollywood-quality video.</p>
-                        <a href="#"><b>Check out our video library <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
+                        <h2>Master-Level Video Instruction</h2>
+                        <p>Chesslessons.com offers FM, IM, and GM instruction on all aspects of play.  Videos, ranging from 5 to 25 minutes, present digestible bite-sized chunks of knowledge.</p>
+                        <a href="#"><b>Meet our instructors<img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
                     </div>
                 </div>
             </div>
         </div>
+
+        
 
         <br /><br />
 
@@ -130,52 +115,44 @@
             <h2 id="team" class="animated">Join the best team in the history of chess!</h2>
             <ul>
                 <li>
-                    <a href="#"><img src="images/cartoonFaces/putin.png" alt="putin" id="face01" class="animated face"></a><br />
+                    <a href="#"><img src="{{url_for('static', filename='cartoonFaces/putin.png')}}" alt="putin" id="face01" class="animated face"></a><br />
                     <p>Grandmasters</p>
                 </li>
                 <li>
-                    <a href="#"><img src="images/cartoonFaces/jobs.png" alt="steve jobs" id="face02" class="animated face"></a><br />
+                    <a href="#"><img src="{{url_for('static', filename='cartoonFaces/jobs.png')}}" alt="steve jobs" id="face02" class="animated face"></a><br />
                     <p>Developers</p>
                 </li>
                 <li>
-                    <a href="#"><img src="images/cartoonFaces/timCook.png" alt="tim cook" id="face03" class="animated face"></a><br />
+                    <a href="#"><img src="{{url_for('static', filename='cartoonFaces/timCook.png')}}" alt="tim cook" id="face03" class="animated face"></a><br />
                     <p>Investors</p>
                 </li>
                 <li>
-                    <a href="#"><img src="images/cartoonFaces/obama.png" alt="obama" id="face04" class="animated face"></a><br />
+                    <a href="#"><img src="{{url_for('static', filename='cartoonFaces/obama.png')}}" alt="obama" id="face04" class="animated face"></a><br />
                     <p>Advisors</p>
                 </li>
             </ul>
         </div>
     </div>
-
-    <div class="hex">
-        <div class="hexInner">
-            <p>Improve your game</p>
-            <h2>Become a grandmaster</h2>
-            <p>Chesslessons teaches everything you need to know<br />to go from n00b to international GM.</p>
-            <a href="#" id="hexButton" class="membershipButton animated infinite">Start Learning For Free!</a>
-        </div>
-    </div>
-
-    <div id="photoCTA">
-        <div id="photoCTAinner">
-            <h2>Optimized for Web and Mobile</h2>
-            <p>With a web site crafted to work on every major device, screen size, and browser, we're there to help you learn. Click on your browser to learn more!</p>
-            <img src="images/browsers.png" style="position:relative;left:-5px;width:400px;" id="browsers" class="animated">
-        </div>
-    </div>
-
-    <div class="quotes">
-        <div class="quotesInner">
-            <img id="spinHorse" src="images/horse.png" />
-            <div class="quote">
-                <h2>"Chess is awesome."</h2>
-                <p>- Bobby Fisher</p>
-                <a href="#" class="membershipButton">Start Your Journey</a>
+<br><br>
+<div class="row">
+            <div class="centerDiv">
+                <div class="float">
+                    <div class="animation" style="height:270px;width:400px;margin-left:5px;">
+                        <h2>See Positions Differently</h2>
+                        <p></p>
+                        <a href="#"><b>Compare pricing plans <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
+                    </div>
+                </div>
+                <div class="float">
+                    <div class="animation" style="margin-left:25px;">
+                        <img src="{{url_for('static' , filename='chessboardEdited.png')}}">
+                        <img src="{{url_for('static' , filename='checkmark.png')}}" id="checkmark">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <br><br><br><br>
 
     <div class="topFooter">
         <div class="topFooterInner">
@@ -210,30 +187,30 @@
                 <ul id="social" class="animated">
                     <li>
                         <a href="http://facebook.com/chesslessons" target="blank">
-                        <img src="images/social/facebook.jpeg" alt="facebook"><br />
+                        <img src="{{url_for('static', filename='social/facebook.jpeg')}}" alt="facebook"><br />
                         <p>Facebook</p>
                         </a>
                     </li>
                     <li>
-                        <img src="images/social/google.png" alt="google+"><br />
+                        <img src="{{url_for('static', filename='social/google.png')}}" alt="google+"><br />
                         <p>Google+</p>
                     </li>
                     <li>
                         <a href="http://twitter.com/chesslessonscom" target="blank">
-                        <img src="images/social/twitter.png" alt="twitter"><br />
+                        <img src="{{url_for('static', filename='social/twitter.png')}}" alt="twitter"><br />
                         <p>Twitter</p>
                         </a>
                     </li><br />
                     <li>
-                        <img src="images/social/tumblr.png" alt="tumblr"><br />
+                        <img src="{{url_for('static', filename='social/tumblr.png')}}" alt="tumblr"><br />
                         <p>Tumblr</p>
                     </li>
                     <li>
-                        <img src="images/social/youtube.png" alt="youtube"><br />
+                        <img src="{{url_for('static', filename='social/youtube.png')}}" alt="youtube"><br />
                         <p>YouTube</p>
                     </li>
                     <li>
-                        <img src="images/social/instagram.png" alt="instagram"><br />
+                        <img src="{{url_for('static', filename='social/instagram.png')}}" alt="instagram"><br />
                         <p>Instagram</p>
                     </li>
                 </ul>
@@ -246,7 +223,7 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="apps.js" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='apps.js')}}" type="text/javascript"></script>
 
 </body>
 </html>
