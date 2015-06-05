@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel='shortcut icon' href="{{url_for('static' , filename='favicon.ico')}}" type='image/x-icon'/ >
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,6 @@
         <a href="#" title="Hide navigation"></a>
     </div>
 
-
-<!-- random comment just to learn github -->
-
-
-
     <div id="jumbotron">
         <h1>The highest quality chess instruction available.</h1>
         <h2>Brilliant players see the board differently.  Let them show you how.</h2><br />
@@ -45,53 +40,72 @@
             <a href="#"><img id="horse" src="{{url_for('static' , filename='horse.png')}}" /></a>
             <p id="yourMove" class="animated">It's your move.</p>
         </div>
-        <p>Use discount code: <a href="#">first5000members</a><span id="mobile"><br /></span> to get your free membership!</p>
-        <a href="#" class="membershipButton"><strong>Become a Member</strong></a>
+        <p id="discount">Use discount code: <a href="#">first5000members</a> to get your free membership!</p>
+        <a href="#" class="membershipButton" id="jumbotronMembershipButton"><strong>Become a Member</strong></a>
     </div>
 
     <div class="section">
 
         <br /><br /><br /><br />
 
-        <div class="row">
-            <div class="centerDiv">
-                <div class="float">
-                    <div class="animation" style="height:270px;width:550px;margin-left:5px;">
+
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-0 hidden-xs hidden-sm">
+                    <div class="animation">
+                        <img src="{{url_for('static' , filename='cloudSmall.png')}}" id="cloud" class="animated">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-0 col-md-5 col-md-offset-1">
+                    <div class="animation">
                         <h2>Memory is the Foundation of Chess</h2>
                         <p>Research indicates that chess grandmasters may know up to 100,000 patterns.  Yet, it's impossible for one player to discover all of these on there own.  And as such, world-level players play through their colleages games.  Where they differ from a typical chess player is in there ability to understand the essence of a position and recall it.  Successful chess players synthesize information differently.</p>
                         <a href="#"><b>Read more research <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
                     </div>
                 </div>
-                <div class="float">
-                    <div class="animation" style="margin-left:100px;margin-top:75px">
-                        <img src="{{url_for('static' , filename='horse.png')}}">
+            </div>
+        </div>
+
+       <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="animation">
+                        <h2>Puzzles makes perfect</h2>
+                        <p>Practice solving puzzles, and you'll be on your way to becoming a grandmaster in no time. Our puzzles give you a board position... it's up to you to figure out the next move!</p>
+                        <a href="#"><b>Compare pricing plans <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
+                    </div>
+                </div>
+                <div class="col-md-5 hidden-xs hidden-sm">
+                    <div class="animation">
+                        <img src="{{url_for('static' , filename='chessboardEdited.png')}}">
+                        <img src="{{url_for('static' , filename='checkmark.png')}}" id="checkmark">
                     </div>
                 </div>
             </div>
         </div>
 
 
-<div class="row">
-            <div class="centerDiv">
-                <div class="float">
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-0 hidden-xs hidden-sm">
                     <div class="animation">
-                        <video width="340" height="160" style="position:absolute;z-index:-10;top:52px;left:52px;" autoplay muted loop>
+                        <video width="340" height="160" style="position:absolute;z-index:-10;top:52px;left:72px;" autoplay muted loop>
                           <source src="{{url_for('static' , filename='video/vid01b.mp4')}}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
-                         <video width="170" height="107" style="position:absolute;z-index:-5;top:161px;left:246px;" autoplay muted loop>
+                         <video width="170" height="107" style="position:absolute;z-index:-5;top:161px;left:261px;" autoplay muted loop>
                           <source src="{{url_for('static' , filename='video/vid02b.mp4')}}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
-                         <video width="62" height="34" style="position:absolute;z-index:8;top:249px;left:241px;" autoplay muted loop>
+                         <video width="62" height="34" style="position:absolute;z-index:8;top:249px;left:255px;" autoplay muted loop>
                           <source src="{{url_for('static' , filename='video/vid03b.mp4')}}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
                         <img src="{{url_for('static' , filename='devices02.png')}}" style="margin-top:30px;">
                     </div>
                 </div>
-                <div class="float">
-                    <div class="animation" style="height:290px;width:400px;margin-left:25px;">
+                <div class="col-lg-5 col-lg-offset-0 col-md-5 col-md-offset-1">
+                    <div class="animation">
                         <h2>Master-Level Video Instruction</h2>
                         <p>Chesslessons.com offers FM, IM, and GM instruction on all aspects of play.  Videos, ranging from 5 to 25 minutes, present digestible bite-sized chunks of knowledge.</p>
                         <a href="#"><b>Meet our instructors<img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
@@ -100,9 +114,9 @@
             </div>
         </div>
 
-        
-
         <br /><br />
+
+    </div>
 
     <div class="partners">
         <ul>
@@ -137,29 +151,52 @@
         </div>
     </div>
 <br><br>
-<div class="row">
-            <div class="centerDiv">
-                <div class="float">
-                    <div class="animation" style="height:270px;width:400px;margin-left:5px;">
-                        <h2>See Positions Differently</h2>
-                        <p></p>
-                        <a href="#"><b>Compare pricing plans <img class="arrowRight" src="{{url_for('static' , filename='arrowRight.png')}}"></b></a>
+
+    <div class="hex">
+        <div class="hexInner">
+            <p>See Positions Differently.</p>
+            <h2>Compare Pricing Plans</h2>
+            <p>Great pricing plans for any budget!</p>
+            <a href="#" id="hexButton" class="membershipButton animated infinite">Check out our prices!</a>
+        </div>
+    </div>
+
+    <div id="photoCTA">
+        <div id="photoCTAinner">
+            <h2>Optimized for Web and Mobile</h2>
+            <p>With a web site crafted to work on every major device, screen size, and browser, we're there to help you learn. Click on your browser to learn more!</p>
+            <img src="{{url_for('static', filename='browsers.png')}}" style="position:relative;left:-5px;width:400px;" id="browsers" class="animated">
+        </div>
+    </div>
+
+    <div class="quotes">
+        <div class="container">
+        <div class="quotesInner">
+            <div class="row">
+                <div class="container">
+                    <div class="col-lg-2 col-lg-offset-1 col-md-offset-5 col-sm-offset-5 col-xs-3 col-xs-offset-5">
+                        <img id="spinHorse" src="{{url_for('static', filename='horse.png')}}" />
                     </div>
-                </div>
-                <div class="float">
-                    <div class="animation" style="margin-left:25px;">
-                        <img src="{{url_for('static' , filename='chessboardEdited.png')}}">
-                        <img src="{{url_for('static' , filename='checkmark.png')}}" id="checkmark">
+                    <div class="col-lg-offset-0 col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-2">
+                        <div class="quote">
+                            <div class="row" style="padding-top: 30px;">
+                                <h3>"The beauty of a move lies not in its appearance but in the thought behind it."</h3>
+                                <p>- Aron Nimzowitsch</p>
+                            </div>
+                            <div class="row">
+                                <a href="#" class="membershipButton">Start Your Journey</a>
+                            </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <br><br><br><br>
+    </div>
+    </div>
 
     <div class="topFooter">
-        <div class="topFooterInner">
-            <div class="footLeft">
+        <div class="container">
+            <div class="footLeft col-lg-7 col-lg-offset-2">
                 <ul>
                     <li>COMPANY</li>
                     <li>Grandmasters</li>
@@ -185,7 +222,7 @@
                     <li>Maps</li>
                 </ul>
             </div>
-            <div class="footRight">
+            <div class="footRight col-lg-3 col-lg-offset-1 col-md-offset-2">
                 <h3>CONNECT WITH US</h3>
                 <ul id="social" class="animated">
                     <li>
