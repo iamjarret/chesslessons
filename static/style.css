@@ -5,6 +5,20 @@ html, body {
     min-width: 100%;
     margin: 0;
     padding: 0;
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0, #004589),
+        color-stop(1, #00ABBE)
+    );
+    background-image: -o-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
+    background-image: -moz-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
+    background-image: -webkit-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
+    background-image: -ms-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
+    background-image: linear-gradient(to right bottom, #004589 0%, #00ABBE 100%);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -127,23 +141,6 @@ div {
     padding-bottom: 20px;
     padding-right: 0px;
     padding-left: 0px;
-
-background-image: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    color-stop(0, #004589),
-    color-stop(1, #00ABBE)
-);
-background-image: -o-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
-background-image: -moz-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
-background-image: -webkit-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
-background-image: -ms-linear-gradient(right bottom, #004589 0%, #00ABBE 100%);
-background-image: linear-gradient(to right bottom, #004589 0%, #00ABBE 100%);
-
-/*    background-color: #236085;
-    background-image: url('bgBlur01.jpg');
-    background-size: cover; */
     text-align: center;
     position: relative;
 }
@@ -251,6 +248,7 @@ background-image: linear-gradient(to right bottom, #004589 0%, #00ABBE 100%);
     margin: 0px;
     text-align: center;
     vertical-align: top;
+    background-color: white;
 }
 
 /* MAIN WHITE SECTION */
@@ -472,6 +470,7 @@ background-image: linear-gradient(to right bottom, #004589 0%, #00ABBE 100%);
 .hex {
     position: relative;
     background-image: url("bgHex.png");
+    background-color: white;
     background-size: cover;
     height: 400px;
     padding: 50px;
@@ -551,6 +550,7 @@ line-height: 1.6;
 .quotes {
     position: relative;
     padding-top: 95px;
+    background-color: white;
 }
 
 .quotesInner {
@@ -803,6 +803,23 @@ line-height: 1.6;
     background-position: 0 -200%;
     background-size: 100% 200%;
 }
+
+
+/* USER HOME PAGE */
+
+#recentVideos {
+    border-top: 1px gray solid;
+    border-bottom: 1px black solid;
+}
+
+.recent {
+    margin: 30px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
+    height: 500px;
+    border: 1px white solid;
+    border-radius: 20px;
+} 
+
 
 /* STYLES FOR SMALL SCREENS */
 
