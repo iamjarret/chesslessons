@@ -14,6 +14,10 @@ def home():
 	session['page']="home"
 	return render_template('index.html')
 
+@app.route('/home')
+def userHome():
+	session['page']="userHome"
+	return render_template('home.html')
 
 @app.route('/login', methods=['GET','POST'])
 def login():

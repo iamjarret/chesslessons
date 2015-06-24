@@ -814,16 +814,127 @@ line-height: 1.6;
 
 .recent {
     margin: 30px 10px 10px 10px;
-    padding: 0 10px 10px 10px;
-    height: 500px;
-    border: 1px white solid;
+    padding: 0 0 0 0;
+    height: 700px;
+    border: 3px #B2CAF6 solid;
     border-radius: 20px;
 } 
+
+.recent h3 {
+    margin:10px 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+
+.scrollVids {
+    height: 560px;
+    overflow: scroll;
+}
+
+.recentVid {
+    height: 140px;
+    border-top: 1px cornflowerblue solid;
+    background-color: rgba(255,255,255,.2);
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+.recentVid:hover {
+    background-color: rgba(255,255,255,.4);
+}
+
+.recentThumbnail {
+    height: 110px;
+    padding: 15px;
+    float: left;
+}
+
+.recentInfo {
+    padding: 20px 0 0 0;
+    float: left;
+    text-align: left;
+    font-size: 0.7em;
+    line-height: 0.5em;
+}
+
+.recentThumbnail.right {
+    float:right;
+}
+
+.recentInfo.right {
+    float:right;
+    text-align:right;
+}
+
+.more {
+    height: 90px;
+    border-top: 1px cornflowerblue solid;
+}
+
+.loadMore {
+    display: inline-block;
+    width: 100px;
+    background-color: rgba(255,255,255,.5);
+    padding: 10px;
+    margin: 10px;
+    border: 1px cornflowerblue solid;
+    border-radius: 10px;
+    font-weight: bold;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    transition: all .4s linear;
+
+}
+
+.loadMore:hover {
+    background-color: rgba(255,255,255,.8);
+}
 
 
 /* STYLES FOR SMALL SCREENS */
 
+@media screen and (max-width: 450px) {
+
+.recentVid {
+    height: 180px;
+}
+
+.recentThumbnail {
+    padding: 10px 0 0 0;
+    float: none;
+}
+
+.recentInfo {
+    float: none;
+    text-align: center;
+}
+
+.recentThumbnail.right {
+    padding: 10px 0 0 0;
+    float: none !important;
+}
+
+.recentInfo.right {
+    float: none !important;
+    text-align: center !important;
+}
+
+.loadMore {
+    padding: 0px;
+}
+
+}
+
 @media screen and (max-width: 700px) {
+
+.recentThumbnail.right {
+    float:left;
+}
+
+.recentInfo.right {
+    float:left;
+    text-align:left;
+}
 
 .bar {
     position: relative;
