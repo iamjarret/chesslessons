@@ -23,13 +23,13 @@
         <img id="logo" src="{{url_for('static' , filename='logo.png')}}" />
         <ul id="nav-links">
             <li><a href="#">ABOUT</a></li>
-            <li><a href="{{url_for('register')}}" class="signUp">SIGN UP</a></li>
+
+            <li><a href="{{url_for('login')}}">SIGN IN</a></li>
         </ul>
         <a href="#navBar" title="Show navigation"></a>
         <a href="#" title="Hide navigation"></a>
     </div>
 <div class="section">
-
         <br /><br /><br /><br />
     <div class="panel panel-default">
                         <div class="panel-body">
@@ -42,13 +42,14 @@
 </ul>
 {% endif %}
 {% endwith%}
+
 {% from "_formhelper.html" import render_field %}
 <form method=post action="{{request.PATH_INFO}}" class="form-horizontal">
     {% for rows in form %}
     {{ render_field(rows) }}
     {% endfor %}
     <br>
-  <p><input type=submit value=Next>
+  <p><input type=submit value=Register>
 </div>
 </div>
 </div>
