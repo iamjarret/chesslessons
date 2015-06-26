@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel='shortcut icon' href="{{url_for('static' , filename='favicon.ico')}}" type='image/x-icon'/ >
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static' , filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static' , filename='animate.css')}}">
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Chesslessons.com">
+    <meta name="keywords" content="learn, chess, lessons, grandmasters">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+
+<style>
+.hero-unit {
+  background-image:url('http://franklincode.coursekit.com.s3.amazonaws.com/30e1ceef65aa4ba1a1bb66056eeb09b6/sass/img/onboarding-bg.jpg');
+  background-size:cover;
+  height:650px;
+  position: relative;
+  top: -20px;
+  opacity: 1;
+}
+
+.searchbox {
+  position: relative;
+  top: 200px;
+}
+
+</style>
+
+</head>
+
+<body ontouchstart>
+
+    <div class="bar" id="colorBar"></div>
+    <div class="bar" id="navBar">
+        <img id="logo" src="{{url_for('static' , filename='logo.png')}}" />
+        <ul id="nav-links">
+            <li><a href="{{url_for('home')}}">ABOUT</a></li>
+            <li><a href="{{url_for('register')}}" class="signUp">SIGN UP</a></li>
+        </ul>
+        <a href="#navBar" title="Show navigation"></a>
+        <a href="#" title="Hide navigation"></a>
+    </div>
+<div class="hero-unit">
+<div class="container searchbox">
+<div class="row">
+<br><br>
+<div class="col-md-8 col-md-offset-2">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">LOGIN</h3>
+</div>
+<div class="panel-body">
+  {% with messages = get_flashed_messages() %}
+{% if messages %}
+    <ul>
+    {% for message in messages %}
+    <li class="alert">{{message}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+{% from "_formhelper.html" import render_field %}
+<form method=post action="{{request.PATH_INFO}}" class="form-horizontal">
+{% for rows in form %}
+{{ render_field(rows) }}
+{% endfor %}
+<br>
+<p><input type=submit value=Search>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="bottomFooter">
+        <p>2015 &copy; Chesslessons.com. All Rights Reserved.</p>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='apps.js')}}" type="text/javascript"></script>
+
+</body>
+</html>

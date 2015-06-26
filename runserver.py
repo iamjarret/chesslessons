@@ -92,7 +92,12 @@ def videos():
 	videos = ['d6c25935786a6a99cd6fc91519b8d3bcb90bd789', '6849f65ce22dfade51a62d76fb958f4fc2341f4e']
 	return render_template('videos.html', videos = videos)
 
-#DEPRECIATED
+@app.route('/cart')
+@login_required
+def cart():
+	session['page']="cart"
+	return render_template('cart.html')
+
 @app.route('/watch/<id>')
 @login_required
 def watch(id):

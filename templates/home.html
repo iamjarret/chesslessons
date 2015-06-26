@@ -131,7 +131,7 @@ path.link {
                     </div>
                 </div>
             </div>
-         <a href="#" class="membershipButton"><strong>Buy More Pieces</strong></a>
+         <a href="{{url_for('cart')}}" class="membershipButton"><strong>Buy More Pieces</strong></a>
         </div>
 
     </div>
@@ -144,8 +144,10 @@ path.link {
                         <h3>Recently Uploaded Videos</h3>
                         <div class="scrollVids">
                             <div class="recentVid">
+                                <a href="{{url_for('watch', id=5)}}">
                                 <div class="recentThumbnail">
                                     <img src="{{url_for('static', filename='thumbnails/thumb01.png')}}" alt="facebook">
+                                </a>
                                 </div>
                                 <div class="recentInfo">
                                     <p>Opening Traps</p>
