@@ -85,11 +85,7 @@ path.link {
     <div class="bar" id="navBar">
         <img id="logo" src="{{url_for('static' , filename='logo.png')}}" />
         <ul id="nav-links">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">RESEARCH</a></li>
-            <li><a href="#">MASTER INSIGHTS</a></li>
-            <li><a href="#">SIGN IN</a></li>
-            <li><a href="#" class="signUp">SIGN UP</a></li>
+            <li><a href="{{url_for('logout')}}" class="signUp">LOGOUT</a></li>
         </ul>
         <a href="#navBar" title="Show navigation"></a>
         <a href="#" title="Hide navigation"></a>

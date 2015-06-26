@@ -25,12 +25,10 @@ db = client.app37656652
 @app.route('/')
 def home():
 	session['page']="home"
-	return render_template('index.html')
-
-@app.route('/home')
-def userHome():
-	session['page']="userHome"
-	return render_template('home.html')
+	if current_user.is_authenticated():
+		return render_template('home.html')
+	else:
+		return render_template('index.html')
 
 @app.route('/login', methods=['GET','POST'])
 def login():
@@ -42,7 +40,7 @@ def login():
 			user = User(in_db)
 			if check_password_hash(user.get('password'),form.password.data):
 				login_user(user,force=True)
-				return(redirect(url_for('videos')))
+				return(redirect(url_for('home')))
 			else:
 				flash("Incorrect password.")
 		else:
@@ -84,7 +82,7 @@ def logout():
 	session['page']="logout"
 	logout_user()
 	flash("You have been successfully logged out.")
-	return redirect(url_for('login'))
+	return redirect(url_for('home'))
 
 #DEPRECIATED
 @app.route('/videos')
@@ -111,9 +109,9 @@ class User(dict, UserMixin):
 
 class RegisterForm(Form):
 	username = TextField('Username', [validators.Length(min=4,max=20)])
-	password = PasswordField('Password', [validators.Length(min=5,max=20)])
 	email = TextField('Email Address', [validators.Length(min=10,max=30)])
-
+	password = PasswordField('Password', [validators.Length(min=5,max=20)])
+	
 class LoginForm(Form):
 	username = TextField('Username', [validators.Length(min=4, max=20)])
 	password = PasswordField('Password', [validators.Length(min=5, max=25)])
